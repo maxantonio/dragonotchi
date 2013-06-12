@@ -1,5 +1,6 @@
 class Acciones 
-	attr_accesor :salir , :estomago
+	attr_accessor(:salir, :estomago)
+
 
 	def initialize 
 		@salir=false 
@@ -21,7 +22,9 @@ class Acciones
 		puts "estoy Muerto"
 	end
 
-	
+	def salir
+		@salir=true
+	end
 
 	def jugar
 		while !@salir

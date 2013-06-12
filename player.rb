@@ -1,38 +1,15 @@
 class Player
-  def initialize
-    @image = Gosu::Image.new(self, "imagenes/dragon.jpg", false)
-    @x = @y = @vel_x = @vel_y = @angle = 0.0
-    @score = 0
-  end
-
-  def warp(x, y)
-    @x, @y = x, y
-  end
-  
-  def turn_left
-    @angle -= 4.5
-  end
-  
-  def turn_right
-    @angle += 4.5
-  end
-  
-  def accelerate
-    @vel_x += Gosu::offset_x(@angle, 0.5)
-    @vel_y += Gosu::offset_y(@angle, 0.5)
-  end
-  
-  def move
-    @x += @vel_x
-    @y += @vel_y
-    @x %= 640
-    @y %= 480
+  def initialize(game_window)
+    @game_window= game_window
+    @image = Gosu::Image.new(game_window, "imagenes/dragon.png", true)
+    @x=180
+    @y=180
     
-    @vel_x *= 0.95
-    @vel_y *= 0.95
   end
 
-  def draw
-   # @image.draw(100,100,false)
-  end
+def draw
+@image.draw(@x, @y, 2)  
+end
+
+
 end
