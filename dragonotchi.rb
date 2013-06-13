@@ -2,6 +2,7 @@
 #drogonochi es una mascota virtual escrita en ruby
 require 'gosu'
 require_relative'textos'
+require_relative'texto'
 require_relative 'acciones'
 require_relative 'game_window'
 require_relative 'player'
