@@ -11,5 +11,17 @@ def draw
 @image.draw(@x, @y, 2)  
 end
 
+def mover_izquierda
+  if @x>-30
+    @x=@x-10
+  end
+end
+
+def mover_derecha
+  if @x<500
+    @x=@x+10
+  end
+end
+
 
 end
