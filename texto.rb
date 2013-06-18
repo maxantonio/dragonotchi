@@ -1,4 +1,3 @@
-
 class Texto
     def initialize(game_window)
     @game_window= game_window
@@ -13,7 +12,7 @@ class Texto
 
   def draw
 @background_image .draw(0,0,2)
-@font.draw(@texto.to_s+" horas de vida", 450, 5, 10, factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
+@font.draw(@texto.to_s+" horas de vida", 5, 5, 3, factor_x = 1, factor_y = 1, color = 0xffffffff, mode = :default)
 end
 
 def dar_instrucciones

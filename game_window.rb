@@ -22,6 +22,7 @@ class MyGameWindow < Gosu::Window
   	   	@texto.dar_instrucciones
   	   end
   	   @texto.update
+       @player.update
   end
   
   def draw
